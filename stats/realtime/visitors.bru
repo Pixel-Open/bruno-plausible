@@ -1,0 +1,19 @@
+meta {
+  name: visitors
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/stats/realtime/visitors?site_id={{siteId}}
+  body: none
+  auth: none
+}
+
+query {
+  site_id: {{siteId}}
+}
+
+auth:bearer {
+  token: 
+}

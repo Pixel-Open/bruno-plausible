@@ -1,0 +1,19 @@
+meta {
+  name: aggregate
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/stats/aggregate?site_id={{siteId}}&period=30d&metrics=visitors
+  body: none
+  auth: none
+}
+
+query {
+  site_id: {{siteId}}
+  period: 30d
+  metrics: visitors
+  ~filters: 
+  ~compare: previous_period
+}
